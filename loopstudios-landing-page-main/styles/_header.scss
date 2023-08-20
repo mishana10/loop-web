@@ -1,0 +1,68 @@
+.header {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+
+    &-cont {
+    height: 100%;
+    width: 100%;
+    padding: 3rem 5rem 4rem 5rem;
+    }
+
+    &-navbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+
+    &-link {
+        margin-right: 1rem;
+        color: $white;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background-color: $white;
+            transform-origin: bottom right;
+            transition: transform .3s ease-in-out;
+            transform: scaleX(0);
+        }
+    }
+
+    &-links a {
+        text-decoration: none;
+    }
+
+    &-box {
+        width: 60%;
+        border: 1px solid white;
+    }
+
+    & p {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 100;
+        padding: 2rem;
+    }
+}
+
+
+.header-link:hover::after {
+        transform: scaleX(1);
+}
+
+.openMenu {
+    cursor: pointer;
+}
+
+.closeMenu {
+    border: none;
+    background-color: $black;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+
+    &-cont-upper {
+        padding: 5rem;
+        padding-left: 7rem;
+        margin-bottom: 8rem;
+    }
+
+    &-img {
+        position: absolute;
+    }
+
+    &-text {
+        background-color: $white;
+        position: relative;
+        left: 600px;
+        top: 250px;
+        color: $black;
+        width: 45%;
+        padding: 3rem;
+    }
+
+    & h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    & p {
+        line-height: 1.5rem;
+        opacity: 0.6;
+    }
+
+    &-cont-lower {
+        width: 100%;
+        height: 100%;
+        padding: 7rem;
+        padding-bottom: 2rem;
+    }
+
+    &-title {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 3rem;
+      }
+
+        & h1 {
+            color: $black;
+        }
+
+    &-creations {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-card {
+
+         width: 100%;
+         text-align: center;
+         cursor: pointer;
+
+         & h1 {
+            width: 100%;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            position: relative;
+            top: -70px;
+            color: $white;
+            font-weight: 400;
+         }
+    }
+
+
+
+ }
+
+ .main-card span {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.3rem;
+ }
+
+.btn {
+    border: 3px solid $black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    background-color: $white;
+    cursor: pointer;
+    letter-spacing: .4rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.main-card {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(250,250,250,0.5);
+        top: 0;
+        left: 0;
+        transition: transform .5s ease-in-out;
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+}
+
+.main-card:hover::after {
+    transform: scaleX(1);
+}

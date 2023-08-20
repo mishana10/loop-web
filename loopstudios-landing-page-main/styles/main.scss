@@ -1,0 +1,77 @@
+@import "config";
+@import "header";
+@import "main-part";
+@import "footer";
+@import "media";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    max-width: 1600px;
+    width: 100%;
+    font-size: 15px;
+    color: $white;
+}
+
+.header-cont {
+    position: relative;
+}
+
+.header-full-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    padding-bottom: 2rem;
+}
+
+.one-row {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.two-row a {
+        text-decoration: none;
+        color: $white;
+        margin-left: 1rem;
+}
+
+.two-row .navbar-link {
+    position: relative;
+
+    &::after {
+        content: "";
+            position: absolute;
+            width: 15%;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background-color: $white;
+            transform-origin: bottom right;
+            transition: transform .3s ease-in-out;
+            transform: scaleX(0);
+    }
+    
+}
+
+.two-row .navbar-link:hover::after {
+    transform: scaleX(1);
+}
